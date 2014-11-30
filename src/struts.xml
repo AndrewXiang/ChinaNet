@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+ <package name="default" extends="struts-default">
+         <action name="login" class="com.javaweb.ch12.struts.action.LoginAction">
+             <result name="success">/web/main.jsp</result>
+             <result name="error">/index.html</result>
+         </action>
+         <action name="addOperator" class="com.javaweb.ch12.struts.action.AddOperatorAction">
+             <result name="success">/saveInfo.jsp</result>
+             <result name="input">/web/addOperator.jsp</result>
+         </action>
+         <action name="resource" class="com.javaweb.ch12.struts.action.ResourceAction">
+             <result name="success">/saveInfo.jsp</result>
+             <result name="input">/web/Resource.jsp</result>
+         </action>
+          <action name="addCustomer" class="com.javaweb.ch12.struts.action.AddCustomerAction">
+             <result name="success">/web/newUser.jsp</result>
+             <result name="false">/saveInfo.jsp</result>
+         </action>
+           <action name="addUser" class="com.javaweb.ch12.struts.action.AddUserAction">
+             <result name="success">/saveInfo.jsp</result>
+             <result name="input">/web/newCustomer.jsp</result>
+         </action>
+          <action name="editCharge" class="com.javaweb.ch12.struts.action.EditChargeAction">
+             <result name="success">/saveInfo.jsp</result>
+             <result name="input">/web/Charge.jsp</result>
+         </action>
+          <action name="editChargeRule" class="com.javaweb.ch12.struts.action.EditChargeRuleAction">
+             <result name="success">/saveInfo.jsp</result>
+             <result name="input">/web/Charge.jsp</result>
+         </action>
+    </package>
+</struts>    

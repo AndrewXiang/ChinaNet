@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation" value="classpath:hibernate.cfg.xml">
+		</property>
+	</bean>
+	<bean id="logindao" class="com.javaweb.ch12.dao.impl.LoginDAOImp">
+		<property name="factory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="admindao" class="com.javaweb.ch12.dao.impl.AdminOperatorDAOImp">
+		<property name="factory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="operatordao" class="com.javaweb.ch12.dao.impl.OperatorDAOImp">
+		<property name="factory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="loginservice" class="com.javaweb.ch12.service.impl.LoginImp">
+		<property name="login">
+			<ref bean="logindao" />
+		</property>
+	</bean>
+	<bean id="adminservice" class="com.javaweb.ch12.service.impl.AdminOperatorImp">
+		<property name="adminoperator">
+			<ref bean="admindao" />
+		</property>
+	</bean>
+	<bean id="operatorservice" class="com.javaweb.ch12.service.impl.OperatorImp">
+		<property name="operator">
+			<ref bean="operatordao" />
+		</property>
+	</bean>
+</beans>

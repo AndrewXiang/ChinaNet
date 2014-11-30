@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table name="tcharge_rule" catalog="mobile"
+		class="com.javaweb.ch12.model.Charge_rule">
+		<primary-key>
+			<generator class="assigned"></generator>
+		</primary-key>
+	</table>
+	<table name="tcharge" catalog="mobile"
+		class="com.javaweb.ch12.model.Charge">
+		<primary-key>
+			<generator class="assigned"></generator>
+		</primary-key>
+	</table>
+	<table name="tcustomer" catalog="mobile"
+		class="com.javaweb.ch12.model.Customer">
+		<primary-key>
+			<generator class="assigned"></generator>
+		</primary-key>
+	</table>
+	<table name="tmobiles" catalog="mobile"
+		class="com.javaweb.ch12.model.Mobile">
+		<primary-key>
+			<generator class="assigned"></generator>
+		</primary-key>
+	</table>
+	<table name="toperator" catalog="mobile"
+		class="com.javaweb.ch12.model.Operator">
+		<primary-key>
+			<generator class="assigned"></generator>
+		</primary-key>
+	</table>
+<table name="tuser" catalog="mobile"
+	class="com.javaweb.ch12.model.User">
+	<primary-key>
+		<generator class="assigned"></generator>
+	</primary-key>
+</table>
+</hibernate-reverse-engineering>
